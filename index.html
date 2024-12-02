@@ -53,58 +53,91 @@
     </style>
 </head>
 <body class="bg-brand-white text-brand-black">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full  bg-brand-white text-brand-black z-50">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="#" class="text-xl font-bold flex items-center">
-                <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-20 mr-4">
-            </a>
-            <div class="hidden md:flex space-x-6 text-xl font-bold">
-                <a href="#home" class="hover:text-brand-blue">Home</a>
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-brand-white text-brand-black z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="#" class="text-xl font-bold flex items-center">
+            <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-20 mr-4">
+        </a>
+        <div class="hidden lg:flex space-x-6 text-xl font-bold">
+            <a href="#home" class="hover:text-brand-blue">Home</a>
+            <div class="relative group">
                 <a href="#programs" class="hover:text-brand-blue">Programs</a>
-                <a href="#about" class="hover:text-brand-blue">About Us</a>
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
+                    <a href="#mma" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">MMA</a>
+                    <a href="#kyokushin" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                    <a href="#muay-thai" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                    <a href="#bjj" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                    <a href="#kettlebell" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kettlebell</a>
+                </div>
+            </div>
+            <a href="#about" class="hover:text-brand-blue">About Us</a>
+            <div class="relative group">
                 <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
-                <a href="#contact" class="hover:text-brand-blue">Contact</a>
-                <a href="#book-trial" class="bg-brand-blue text-brand-white px-4 py-2 rounded">Book Free Trial</a>
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
+                    <a href="#photos" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Photos</a>
+                    <a href="#videos" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Videos</a>
+                </div>
             </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-toggle" class="text-brand-blue text-4xl ">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+            <a href="#contact" class="hover:text-brand-blue">Contact</a>
+            <a href="#book-trial" class="bg-brand-blue text-brand-white px-4 py-2 rounded">Book Free Trial</a>
         </div>
-    </nav>
-
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brand-black text-brand-white hidden z-50 pt-20">
-        <div class="container mx-auto flex flex-col items-center  space-y-6">
-            <a href="#home" class="text-xl">Home</a>
-            <a href="#programs" class="text-xl">Programs</a>
-            <a href="#about" class="text-xl">About Us</a>
-            <a href="#gallery" class="text-xl">Gallery</a>
-            <a href="#contact" class="text-xl">Contact</a>
-            <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
-            <button id="mobile-menu-close" class="absolute top-6 right-6">
-                <i class="fas fa-times text-2xl"></i>
+        <div class="lg:hidden">
+            <button id="mobile-menu-toggle" class="text-brand-blue text-4xl">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
     </div>
+</nav>
 
-    <!-- Banner Slider -->
-    <div id="banner-slider" class="relative h-screen">
-        <!-- Banners will be dynamically inserted by JavaScript -->
-    </div>
-
-    <!-- Our Programs Section -->
-    <section id="programs" class="container mx-auto py-16 px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">Our Programs</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Program items will be dynamically inserted -->
-            
-            
-            <!-- More program items... -->
+<!-- Mobile Menu (Hidden by default) -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brand-black text-brand-white hidden z-50 pt-20 transition-opacity duration-300">
+    <div class="container mx-auto flex flex-col items-center space-y-6">
+        <a href="#home" class="text-xl">Home</a>
+        <div class="relative group w-full flex flex-col items-center">
+            <a href="#programs" class="text-xl" id="programs-toggle">Programs</a>
+            <!-- <i class="fas fa-chevron-down"></i> dropdown icon -->
+            <div id="programs-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
+                <a href="#mma" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">MMA</a>
+                <a href="#kyokushin" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                <a href="#muay-thai" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                <a href="#bjj" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                <a href="#kettlebell" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kettlebell</a>
+            </div>
         </div>
-    </section>
+        <a href="#about" class="text-xl">About Us</a>
+        <div class="relative group w-full flex flex-col items-center">
+            <a href="#gallery" class="text-xl" id="gallery-toggle">Gallery</a>
+            <div id="gallery-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
+                <a href="#photos" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Photos</a>
+                <a href="#videos" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Videos</a>
+            </div>
+        </div>
+        <a href="#contact" class="text-xl">Contact</a>
+        <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
+        <button id="mobile-menu-close" class="absolute top-6 right-6">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
+</div>
+   <!-- Banner Slider -->
+<div id="banner-slider" class="relative h-screen overflow-hidden">
+    <div id="banner-slides" class="relative w-full h-full"></div>
+    <button id="prev-banner" class="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/50 text-white px-4 py-2 z-10">
+        &lt;
+    </button>
+    <button id="next-banner" class="hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/50 text-white px-4 py-2 z-10">
+        &gt;
+    </button>
+</div>
+
+<!-- Our Programs Section -->
+<section id="programs" class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Programs</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Program items will be dynamically inserted -->
+    </div>
+</section>
 
     <!-- Why Choose Dastbi Section -->
     <section id="why-choose" class="bg-brand-blue text-brand-white py-16">
@@ -371,112 +404,175 @@
     </footer>
 
     <script>
-        // Banner Slider Data
-const banners = [
-    {
-        title: 'Define New Limits',
-        description: 'Revolutionizing your fitness journey with MMA, BJJ, Karate and kettlebell training. Start today',
-        image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        buttonText: 'Contact Us'
-    },
-    {
-        title: 'Women in Action',
-        description: 'Ladies, it\'s time to master the art of Self-defence. Presenting Divas to Defence program. Join now',
-        image: 'https://images.pexels.com/photos/11391963/pexels-photo-11391963.jpeg?auto=compress&cs=tinysrgb&w=600',
-        buttonText: 'Join Now'
-    },
-    {
-        title: 'Empowering the Youth',
-        description: 'Unlock your kid\'s true potential with our Youth Program. Join today',
-        image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        buttonText: 'Register'
-    },
-    {
-        title: 'Ultimate Strength Training',
-        description: 'Strengthen your core with our special strength training. Join now',
-        image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        buttonText: 'Get Started'
-    }
-];
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const programsToggle = document.getElementById('programs-toggle');
+const programsDropdown = document.getElementById('programs-dropdown');
+const galleryToggle = document.getElementById('gallery-toggle');
+const galleryDropdown = document.getElementById('gallery-dropdown');
 
-// Programs Data
-const programs = [
-    { name: 'MMA', image: 'https://images.pexels.com/photos/6296013/pexels-photo-6296013.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { name: 'Kyokushin Karate', image: 'https://images.pexels.com/photos/7045608/pexels-photo-7045608.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { name: 'Muay Thai', image: 'https://images.pexels.com/photos/2628210/pexels-photo-2628210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { name: 'Brazilian Jiu Jitsu', image: 'https://images.pexels.com/photos/8611982/pexels-photo-8611982.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    // { name: 'Kyokushin Karate', image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { name: 'Kettlebell', image: 'https://images.pexels.com/photos/6796972/pexels-photo-6796972.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { name: 'Kickboxing', image: 'https://images.pexels.com/photos/598686/pexels-photo-598686.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { name: 'Combat Self Defense', image: 'https://images.pexels.com/photos/10752027/pexels-photo-10752027.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { name: 'Certifications', image: 'https://images.pexels.com/photos/8112168/pexels-photo-8112168.jpeg?auto=compress&cs=tinysrgb&w=600' }
-];
-
-// Banner Slider Functionality
-function initBannerSlider() {
-    const sliderContainer = document.getElementById('banner-slider');
-    let currentBanner = 0;
-
-    function createBannerHTML(banner) {
-        return `
-            <div class="banner-slide absolute top-0 left-0 w-full h-full bg-cover bg-center flex items-center justify-center text-white" 
-                 style="background-image: url('${banner.image}')">
-                <div class="text-center bg-black/50 p-8 rounded-lg">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">${banner.title}</h1>
-                    <p class="text-xl mb-6">${banner.description}</p>
-                    <a href="#contact" class="bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
-                        ${banner.buttonText}
-                    </a>
-                </div>
-            </div>
-        `;
-    }
-
-    function renderBanner() {
-        sliderContainer.innerHTML = createBannerHTML(banners[currentBanner]);
-    }
-
-    function nextBanner() {
-        currentBanner = (currentBanner + 1) % banners.length;
-        renderBanner();
-    }
-
-    renderBanner();
-    setInterval(nextBanner, 5000); // Change banner every 5 seconds
-}
-
-// Mobile Menu Functionality
-function initMobileMenu() {
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuToggle.addEventListener('click', () => {
-        mobileMenu.classList.remove('hidden');
-    });
-
-    mobileMenuClose.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
-}
-
-// Populate Programs Section
-function populatePrograms() {
-    const programsContainer = document.querySelector('#programs .grid');
-    programsContainer.innerHTML = programs.map(program => `
-        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-            <img src="${program.image}" alt="${program.name}" class="mx-auto mb-4 rounded-lg">
-            <h3 class="text-xl font-semibold">${program.name}</h3>
-        </div>
-    `).join('');
-}
-
-// Initialize All Functionalities
-document.addEventListener('DOMContentLoaded', () => {
-    initBannerSlider();
-    initMobileMenu();
-    populatePrograms();
+mobileMenuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    setTimeout(() => {
+        mobileMenu.classList.toggle('opacity-100');
+    }, 10);
 });
+
+mobileMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('opacity-100');
+});
+
+programsToggle.addEventListener('click', () => {
+    programsDropdown.classList.toggle('hidden');
+    setTimeout(() => {
+        programsDropdown.classList.toggle('opacity-100');
+        programsDropdown.classList.toggle('translate-y-0');
+    }, 10);
+});
+
+galleryToggle.addEventListener('click', () => {
+    galleryDropdown.classList.toggle('hidden');
+    setTimeout(() => {
+        galleryDropdown.classList.toggle('opacity-100');
+        galleryDropdown.classList.toggle('translate-y-0');
+    }, 10);
+});
+
+
+       // Banner Slider Data
+    const banners = [
+        {
+            title: 'Define New Limits',
+            description: 'Revolutionizing your fitness journey with MMA, BJJ, Karate and kettlebell training. Start today',
+            image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            buttonText: 'Contact Us'
+        },
+        {
+            title: 'Women in Action',
+            description: 'Ladies, it\'s time to master the art of Self-defence. Presenting Divas to Defence program. Join now',
+            image: 'https://images.pexels.com/photos/11391963/pexels-photo-11391963.jpeg?auto=compress&cs=tinysrgb&w=600',
+            buttonText: 'Join Now'
+        },
+        {
+            title: 'Empowering the Youth',
+            description: 'Unlock your kid\'s true potential with our Youth Program. Join today',
+            image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            buttonText: 'Register'
+        },
+        {
+            title: 'Ultimate Strength Training',
+            description: 'Strengthen your core with our special strength training. Join now',
+            image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            buttonText: 'Get Started'
+        }
+    ];
+
+    // Programs Data
+    const programs = [
+        { name: 'MMA', image: 'https://images.pexels.com/photos/6296013/pexels-photo-6296013.jpeg?auto=compress&cs=tinysrgb&w=600', link: 'program.html#mma' },
+        { name: 'Kyokushin Karate', image: 'https://images.pexels.com/photos/7045608/pexels-photo-7045608.jpeg?auto=compress&cs=tinysrgb&w=600', link: 'program.html#KyokushinKarate' },
+        { name: 'Muay Thai', image: 'https://images.pexels.com/photos/2628210/pexels-photo-2628210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', link: 'index.html#contact' },
+        { name: 'Brazilian Jiu Jitsu', image: 'https://images.pexels.com/photos/8611982/pexels-photo-8611982.jpeg?auto=compress&cs=tinysrgb&w=600', link: 'index.html#contact' },
+        { name: 'Kettlebell', image: 'https://images.pexels.com/photos/6796972/pexels-photo-6796972.jpeg?auto=compress&cs=tinysrgb&w=600', link: 'index.html#contact' },
+        { name: 'Kickboxing', image: 'https://images.pexels.com/photos/598686/pexels-photo-598686.jpeg?auto=compress&cs=tinysrgb&w=600', link: 'index.html#contact' },
+        { name: 'Combat Self Defense', image: 'https://images.pexels.com/photos/10752027/pexels-photo-10752027.jpeg?auto=compress&cs=tinysrgb&w=600', link: 'index.html#contact' },
+        { name: 'Certifications', image: 'https://images.pexels.com/photos/8112168/pexels-photo-8112168.jpeg?auto=compress&cs=tinysrgb&w=600', link: 'index.html#contact' }
+    ];
+
+    // Banner Slider Functionality
+    function initBannerSlider() {
+        const sliderContainer = document.getElementById('banner-slides');
+        const prevButton = document.getElementById('prev-banner');
+        const nextButton = document.getElementById('next-banner');
+        let currentBanner = 0;
+
+        function createBannerHTML(banner) {
+            return `
+                <div class="banner-slide absolute top-0 left-0 w-full h-full bg-cover bg-center flex items-center justify-center text-white transition-transform duration-500"
+                     style="background-image: url('${banner.image}')">
+                    <div class="text-center bg-black/50 p-8 rounded-lg">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">${banner.title}</h1>
+                        <p class="text-xl mb-6">${banner.description}</p>
+                        <a href="#contact" class="bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+                            ${banner.buttonText}
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderBanner() {
+            sliderContainer.innerHTML = createBannerHTML(banners[currentBanner]);
+        }
+
+        function nextBanner() {
+            currentBanner = (currentBanner + 1) % banners.length;
+            renderBanner();
+        }
+
+        function prevBanner() {
+            currentBanner = (currentBanner - 1 + banners.length) % banners.length;
+            renderBanner();
+        }
+
+        renderBanner();
+        setInterval(nextBanner, 5000); // Change banner every 5 seconds
+
+        // Add swipe functionality
+        let startX = 0;
+        sliderContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX > endX + 50) {
+                nextBanner();
+            } else if (startX < endX - 50) {
+                prevBanner();
+            }
+        });
+
+        // Add click functionality for arrows
+        prevButton.addEventListener('click', prevBanner);
+        nextButton.addEventListener('click', nextBanner);
+    }
+
+    // Mobile Menu Functionality
+    function initMobileMenu() {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    }
+
+    // Populate Programs Section
+    function populatePrograms() {
+        const programsContainer = document.querySelector('#programs .grid');
+        programsContainer.innerHTML = programs.map(program => `
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="${program.image}" alt="${program.name}" class="mx-auto mb-4 rounded-lg">
+                <h3 class="text-xl font-semibold">${program.name}</h3>
+                <a href="${program.link}" class="bg-brand-blue text-white px-4 py-2 mt-4 inline-block rounded-lg hover:bg-opacity-90">Read More</a>
+            </div>
+        `).join('');
+    }
+
+    // Initialize All Functionalities
+    document.addEventListener('DOMContentLoaded', () => {
+        initBannerSlider();
+        initMobileMenu();
+        populatePrograms();
+    });
 
 
  // Add event listener for read more button
