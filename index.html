@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastbi MMA Gym - Revolutionize Your Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-white': '#FFFFFF',
+                        'brand-blue': '#2C5E91',
+                        'brand-black': '#121212'
+                    }
+                }
+            }
+        }
+    </script>
+     <style>
+       @media (min-width: 768px) {
+        .carousel-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            transition: none !important;
+        }
+        .carousel-item {
+            flex: none !important;
+            min-width: auto !important;
+            width: 100% !important;
+        }
+    }
+
+    /* Mobile-specific styles */
+    @media (max-width: 768px) {
+        .carousel-container {
+            overflow-x: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+        .carousel-item {
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body class="bg-brand-white text-brand-black">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full  bg-brand-white text-brand-black z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#" class="text-xl font-bold flex items-center">
+                <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-20 mr-4">
+            </a>
+            <div class="hidden md:flex space-x-6 text-xl font-bold">
+                <a href="#home" class="hover:text-brand-blue">Home</a>
+                <a href="#programs" class="hover:text-brand-blue">Programs</a>
+                <a href="#about" class="hover:text-brand-blue">About Us</a>
+                <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
+                <a href="#contact" class="hover:text-brand-blue">Contact</a>
+                <a href="#book-trial" class="bg-brand-blue text-brand-white px-4 py-2 rounded">Book Free Trial</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-toggle" class="text-brand-blue text-4xl ">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brand-black text-brand-white hidden z-50 pt-20">
+        <div class="container mx-auto flex flex-col items-center  space-y-6">
+            <a href="#home" class="text-xl">Home</a>
+            <a href="#programs" class="text-xl">Programs</a>
+            <a href="#about" class="text-xl">About Us</a>
+            <a href="#gallery" class="text-xl">Gallery</a>
+            <a href="#contact" class="text-xl">Contact</a>
+            <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
+            <button id="mobile-menu-close" class="absolute top-6 right-6">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Banner Slider -->
+    <div id="banner-slider" class="relative h-screen">
+        <!-- Banners will be dynamically inserted by JavaScript -->
+    </div>
+
+    <!-- Our Programs Section -->
+    <section id="programs" class="container mx-auto py-16 px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Programs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Program items will be dynamically inserted -->
+            
+            
+            <!-- More program items... -->
+        </div>
+    </section>
+
+    <!-- Why Choose Dastbi Section -->
+    <section id="why-choose" class="bg-brand-blue text-brand-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Why Choose Dastbi?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Why choose items will be dynamically inserted -->
+                <div class="bg-white/10 rounded-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Expert Instructors</h3>
+                    <p>Get access to the ultimate fitness training with our experienced trainers.</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-4">High quality equipment</h3>
+                    <p>Delivering guaranteed resultswith range of standard quality equipment along with modern facilities</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Personal Training</h3>
+                    <p>Keep track of your fitness goal and find the best fit with our personalized plan of attack.</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Diet Nutrition</h3>
+                    <p>Obtain the well-balancedlifestyle with our customized diet plan and exercise routine.</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Gender equality</h3>
+                    <p>Ensuring all our clients are treated as equals with dignity and respect irrespective of their gender.</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Children friendly</h3>
+                    <p>Youth program designed to motivate children and develop coordination, strength and confidence.</p>
+                </div>
+                <!-- More why choose items... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+<section id="about" class="container mx-auto py-16 px-4">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <img src="angkim.jpg" 
+                 alt="Dastbi MMA Gym" class=" rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-1/2">
+            <h2 class="text-4xl font-bold mb-6">About Dastbi MMA</h2>
+            <p class="text-lg mb-6">
+                DASTBI MMA, founded in 2017, is an institute of Martial Arts & fitness that provides quality training to build a stronger generation and encourage people of all ages and abilities to take up MMA and other combat to develop individually and master the art of self-defense. 
+                Currently we offer trainings for MMA (Mixed Martial Arts), Muay Thai which is recognized by the Olympics, Brazilian Jiu Jitsu (Gi & non-Gi), Kyokushin Karate (world’s strongest Karate), CQC (Self-protection system), Animal Flow to improve strength, power, flexibility, mobility and coordination. Callisthenic, Kettlebell, Free Hand Exercises, Strength and conditioning Training and many more. 
+            </p>
+            <p class="text-lg mb-6 hidden md:block">
+                We also organize seminars, boot camps, free self-defense training sessions for women under the 'Divas to Defense Program.
+            </p>
+            <button id="read-more-btn" class="bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+                Read More
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Featured In Section -->
+<section id="featured-in" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Featured In</h2>
+        <div class="carousel-container md:grid md:grid-cols-3 gap-8">
+            <div class="carousel-wrapper flex">
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 text-center flex-shrink-0">
+                    <img src="angkim.jpg" alt="House of Batalla Logo" class="mx-auto mb-4 h-20">
+                    <h3 class="text-xl font-semibold mb-4">House of Batalla</h3>
+                    <p>Featured article on our innovative training methods</p>
+                    <a href="#" class="text-brand-blue mt-4 inline-block">View Article</a>
+                </div>
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 text-center flex-shrink-0">
+                    <img src="angkim.jpg" alt="Logical Indian Logo" class="mx-auto mb-4 h-20">
+                    <h3 class="text-xl font-semibold mb-4">Logical Indian</h3>
+                    <p>Spotlight on our community impact and youth programs</p>
+                    <a href="#" class="text-brand-blue mt-4 inline-block">View Feature</a>
+                </div>
+                <div class="carousel-item bg-white rounded-lg shadow-md p-6 text-center flex-shrink-0">
+                    <img src="angkim.jpg" alt="Archives Logo" class="mx-auto mb-4 h-20">
+                    <h3 class="text-xl font-semibold mb-4">Local Archives</h3>
+                    <p>Coverage of our martial arts training excellence</p>
+                    <a href="#" class="text-brand-blue mt-4 inline-block">View Coverage</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="#" class="see-more bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+                See More
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Upcoming Events Section -->
+<section id="upcoming-events" class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
+    <div class="carousel-container md:grid md:grid-cols-3 gap-8">
+        <div class="carousel-wrapper flex">
+            <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-shrink-0">
+                <h3 class="text-2xl font-semibold mb-4">MMA Tournament</h3>
+                <p class="text-gray-600 mb-4">Annual Inter-Gym Championship</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-brand-blue font-bold">July 15, 2024</span>
+                    <a href="#" class="bg-brand-blue text-white px-4 py-2 rounded">Register</a>
+                </div>
+            </div>
+            <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-shrink-0">
+                <h3 class="text-2xl font-semibold mb-4">Bootcamp Intensive</h3>
+                <p class="text-gray-600 mb-4">Weekend Strength and Conditioning</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-brand-blue font-bold">August 3-4, 2024</span>
+                    <a href="#" class="bg-brand-blue text-white px-4 py-2 rounded">Join</a>
+                </div>
+            </div>
+            <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-shrink-0">
+                <h3 class="text-2xl font-semibold mb-4">Self-Defense Workshop</h3>
+                <p class="text-gray-600 mb-4">Divas to Defense Special Session</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-brand-blue font-bold">September 20, 2024</span>
+                    <a href="#" class="bg-brand-blue text-white px-4 py-2 rounded">Book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-8">
+        <a href="#" class="see-more bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+            See More
+        </a>
+    </div>
+</section>
+
+<!-- Dastbi Gallery Section -->
+<section id="gallery" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Dastbi Gallery</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <video controls class="w-full h-48 object-cover">
+                    <source src="https://lh3.googleusercontent.com/ggs/AF1QipMzZb611y8oYcZ5o2Xfgr421MG4iaEBoELBKTUb=m18" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <video controls class="w-full h-48 object-cover">
+                    <source src="https://lh3.googleusercontent.com/ggs/AF1QipMzZb611y8oYcZ5o2Xfgr421MG4iaEBoELBKTUb=m18" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://images.pexels.com/photos/7045608/pexels-photo-7045608.jpeg" alt="Training Session" class="w-full h-48 object-cover">
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://images.pexels.com/photos/6296013/pexels-photo-6296013.jpeg" alt="Training Session" class="w-full h-48 object-cover">
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-8">
+        <a href="#" class="see-more bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+            See More
+        </a>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Hear From Our Happy Clients</h2>
+    <div class="carousel-container md:grid md:grid-cols-3 gap-8">
+        <div class="carousel-wrapper flex">
+            <div class="carousel-item bg-white rounded-lg shadow-md p-6 text-center flex-shrink-0">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocK6LgEG1aeWKxf9kyoR1FvzVE3j5nJvOoqSQ5ZBn6_FS2p84_nM=w83-h83-p-rp-mo-br100" 
+                     alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+                <p class="text-gray-600 mb-4">"Dastbi MMA transformed my fitness journey. The trainers are incredible!"</p>
+                <div class="flex justify-center">
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                </div>
+            </div>
+            <div class="carousel-item bg-white rounded-lg shadow-md p-6 text-center flex-shrink-0">
+                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                     alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+                <p class="text-gray-600 mb-4">"Best self-defense training I've ever experienced. Highly recommended!"</p>
+                <div class="flex justify-center">
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star-half-alt text-yellow-500"></i>
+                </div>
+            </div>
+            <div class="carousel-item bg-white rounded-lg shadow-md p-6 text-center flex-shrink-0">
+                <img src="https://images.pexels.com/photos/1450666/pexels-photo-1450666.jpeg" 
+                     alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Emma Thompson</h3>
+                <p class="text-gray-600 mb-4">"Amazing youth program. My kids have gained so much confidence!"</p>
+                <div class="flex justify-center">
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <i class="fas fa-star text-yellow-500"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-8">
+        <a href="review.html" class="see-more bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+            See More
+        </a>
+    </div>
+</section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="bg-brand-black text-brand-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Let Us Get Back To You</h2>
+            <form id="contact-form" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Name" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Email" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <input type="tel" placeholder="Phone Number" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <select class="w-full p-3 bg-white/10 rounded">
+                        <option  class="text-brand-black">Select Program</option>
+                        <option  class="text-brand-black">Book Free Trial</option>
+                        <option  class="text-brand-black">MMA</option>
+                        <option  class="text-brand-black">Kyokushin Karate</option>
+                        <option  class="text-brand-black">Muay Thai</option>
+                        <option  class="text-brand-black">Brazilian Jiu Jitsu</option>
+                        <option  class="text-brand-black">Kettlebell</option>
+                        <option  class="text-brand-black">Kickboxing</option>
+                        <option  class="text-brand-black">Combat Self Defense</option>
+                        <option  class="text-brand-black">Certifications</option>
+                        <!-- More program options -->
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Message" class="w-full p-3 bg-white/10 rounded" rows="4"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-blue text-brand-white py-3 rounded hover:bg-opacity-90">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-brand-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2024 Dastbi MMA. All Rights Reserved. Designed By <a href="https://saajid.netlify.app/" class="text-brand-blue" target="_blank">Sajid</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Banner Slider Data
+const banners = [
+    {
+        title: 'Define New Limits',
+        description: 'Revolutionizing your fitness journey with MMA, BJJ, Karate and kettlebell training. Start today',
+        image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        buttonText: 'Contact Us'
+    },
+    {
+        title: 'Women in Action',
+        description: 'Ladies, it\'s time to master the art of Self-defence. Presenting Divas to Defence program. Join now',
+        image: 'https://images.pexels.com/photos/11391963/pexels-photo-11391963.jpeg?auto=compress&cs=tinysrgb&w=600',
+        buttonText: 'Join Now'
+    },
+    {
+        title: 'Empowering the Youth',
+        description: 'Unlock your kid\'s true potential with our Youth Program. Join today',
+        image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        buttonText: 'Register'
+    },
+    {
+        title: 'Ultimate Strength Training',
+        description: 'Strengthen your core with our special strength training. Join now',
+        image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        buttonText: 'Get Started'
+    }
+];
+
+// Programs Data
+const programs = [
+    { name: 'MMA', image: 'https://images.pexels.com/photos/6296013/pexels-photo-6296013.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'Kyokushin Karate', image: 'https://images.pexels.com/photos/7045608/pexels-photo-7045608.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'Muay Thai', image: 'https://images.pexels.com/photos/2628210/pexels-photo-2628210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { name: 'Brazilian Jiu Jitsu', image: 'https://images.pexels.com/photos/8611982/pexels-photo-8611982.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    // { name: 'Kyokushin Karate', image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { name: 'Kettlebell', image: 'https://images.pexels.com/photos/6796972/pexels-photo-6796972.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'Kickboxing', image: 'https://images.pexels.com/photos/598686/pexels-photo-598686.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'Combat Self Defense', image: 'https://images.pexels.com/photos/10752027/pexels-photo-10752027.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'Certifications', image: 'https://images.pexels.com/photos/8112168/pexels-photo-8112168.jpeg?auto=compress&cs=tinysrgb&w=600' }
+];
+
+// Banner Slider Functionality
+function initBannerSlider() {
+    const sliderContainer = document.getElementById('banner-slider');
+    let currentBanner = 0;
+
+    function createBannerHTML(banner) {
+        return `
+            <div class="banner-slide absolute top-0 left-0 w-full h-full bg-cover bg-center flex items-center justify-center text-white" 
+                 style="background-image: url('${banner.image}')">
+                <div class="text-center bg-black/50 p-8 rounded-lg">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">${banner.title}</h1>
+                    <p class="text-xl mb-6">${banner.description}</p>
+                    <a href="#contact" class="bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+                        ${banner.buttonText}
+                    </a>
+                </div>
+            </div>
+        `;
+    }
+
+    function renderBanner() {
+        sliderContainer.innerHTML = createBannerHTML(banners[currentBanner]);
+    }
+
+    function nextBanner() {
+        currentBanner = (currentBanner + 1) % banners.length;
+        renderBanner();
+    }
+
+    renderBanner();
+    setInterval(nextBanner, 5000); // Change banner every 5 seconds
+}
+
+// Mobile Menu Functionality
+function initMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+}
+
+// Populate Programs Section
+function populatePrograms() {
+    const programsContainer = document.querySelector('#programs .grid');
+    programsContainer.innerHTML = programs.map(program => `
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="${program.image}" alt="${program.name}" class="mx-auto mb-4 rounded-lg">
+            <h3 class="text-xl font-semibold">${program.name}</h3>
+        </div>
+    `).join('');
+}
+
+// Initialize All Functionalities
+document.addEventListener('DOMContentLoaded', () => {
+    initBannerSlider();
+    initMobileMenu();
+    populatePrograms();
+});
+
+
+ // Add event listener for read more button
+ document.getElementById('read-more-btn')?.addEventListener('click', () => {
+        const hiddenParagraph = document.querySelector('#about p.hidden');
+        if (hiddenParagraph) {
+            hiddenParagraph.classList.remove('hidden');
+        }
+    });
+
+    function initCarousels() {
+        const carouselContainers = document.querySelectorAll('.carousel-container');
+        
+        carouselContainers.forEach(container => {
+            const wrapper = container.querySelector('.carousel-wrapper');
+            const items = container.querySelectorAll('.carousel-item');
+            
+            // Reset any previous transforms
+            wrapper.style.transform = 'translateX(0)';
+            
+            // Only apply mobile carousel for screens smaller than 768px
+            if (window.innerWidth < 768) {
+                let startX = 0;
+                let currentTranslate = 0;
+                let currentIndex = 0;
+
+                // Touch start event
+                container.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                // Touch move event
+                container.addEventListener('touchmove', (e) => {
+                    const moveX = e.touches[0].clientX - startX;
+                    currentTranslate = -currentIndex * 100 + (moveX / container.offsetWidth * 100);
+                    wrapper.style.transform = `translateX(${currentTranslate}%)`;
+                });
+
+                // Touch end event
+                container.addEventListener('touchend', (e) => {
+                    const moveX = e.changedTouches[0].clientX - startX;
+                    
+                    // Determine if swipe is significant enough to change slide
+                    if (Math.abs(moveX) > container.offsetWidth / 4) {
+                        if (moveX > 0 && currentIndex > 0) {
+                            currentIndex--;
+                        } else if (moveX < 0 && currentIndex < items.length - 1) {
+                            currentIndex++;
+                        }
+                    }
+
+                    // Reset transform
+                    wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+                });
+                 // Auto-sliding
+     setInterval(() => {
+                        currentIndex = (currentIndex + 1) % items.length;
+                        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    }, 5000);
+                
+            } else {
+                // Ensure no transform on larger screens
+                wrapper.style.transform = 'translateX(0)';
+            }
+            
+        });
+    }
+    
+                
+
+    // Initialize carousels when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        initCarousels();
+    });
+
+    // Reinitialize carousels on window resize
+    window.addEventListener('resize', initCarousels);
+    </script>
+</body>
+</html>

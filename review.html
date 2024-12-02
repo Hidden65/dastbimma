@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastbi MMA Gym - Revolutionize Your Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-white': '#FFFFFF',
+                        'brand-blue': '#2C5E91',
+                        'brand-black': '#121212'
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="bg-brand-white text-brand-black">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full  bg-brand-white text-brand-black z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#" class="text-xl font-bold flex items-center">
+                <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-20 mr-4">
+            </a>
+            <div class="hidden md:flex space-x-6 text-xl font-bold">
+                <a href="#home" class="hover:text-brand-blue">Home</a>
+                <a href="#programs" class="hover:text-brand-blue">Programs</a>
+                <a href="#about" class="hover:text-brand-blue">About Us</a>
+                <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
+                <a href="#contact" class="hover:text-brand-blue">Contact</a>
+                <a href="#book-trial" class="bg-brand-blue text-brand-white px-4 py-2 rounded">Book Free Trial</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-toggle" class="text-brand-blue text-4xl ">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brand-black text-brand-white hidden z-50 pt-20">
+        <div class="container mx-auto flex flex-col items-center  space-y-6">
+            <a href="#home" class="text-xl">Home</a>
+            <a href="#programs" class="text-xl">Programs</a>
+            <a href="#about" class="text-xl">About Us</a>
+            <a href="#gallery" class="text-xl">Gallery</a>
+            <a href="#contact" class="text-xl">Contact</a>
+            <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
+            <button id="mobile-menu-close" class="absolute top-6 right-6">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    
+
+    
+
+   
+
+<!-- Testimonials Section (Updated) -->
+<section id="testimonials" class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Hear From Our Happy Clients</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+            <p class="text-gray-600 mb-4">"Dastbi MMA transformed my fitness journey. The trainers are incredible!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+            <p class="text-gray-600 mb-4">"Best self-defense training I've ever experienced. Highly recommended!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1450666/pexels-photo-1450666.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Emma Thompson</h3>
+            <p class="text-gray-600 mb-4">"Amazing youth program. My kids have gained so much confidence!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+            <p class="text-gray-600 mb-4">"Dastbi MMA transformed my fitness journey. The trainers are incredible!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+            <p class="text-gray-600 mb-4">"Best self-defense training I've ever experienced. Highly recommended!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1450666/pexels-photo-1450666.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Emma Thompson</h3>
+            <p class="text-gray-600 mb-4">"Amazing youth program. My kids have gained so much confidence!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+            <p class="text-gray-600 mb-4">"Dastbi MMA transformed my fitness journey. The trainers are incredible!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+            <p class="text-gray-600 mb-4">"Best self-defense training I've ever experienced. Highly recommended!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1450666/pexels-photo-1450666.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Emma Thompson</h3>
+            <p class="text-gray-600 mb-4">"Amazing youth program. My kids have gained so much confidence!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+            <p class="text-gray-600 mb-4">"Dastbi MMA transformed my fitness journey. The trainers are incredible!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+            <p class="text-gray-600 mb-4">"Best self-defense training I've ever experienced. Highly recommended!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1450666/pexels-photo-1450666.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Emma Thompson</h3>
+            <p class="text-gray-600 mb-4">"Amazing youth program. My kids have gained so much confidence!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+            <p class="text-gray-600 mb-4">"Dastbi MMA transformed my fitness journey. The trainers are incredible!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+            <p class="text-gray-600 mb-4">"Best self-defense training I've ever experienced. Highly recommended!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1450666/pexels-photo-1450666.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Emma Thompson</h3>
+            <p class="text-gray-600 mb-4">"Amazing youth program. My kids have gained so much confidence!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+            <p class="text-gray-600 mb-4">"Dastbi MMA transformed my fitness journey. The trainers are incredible!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+            <p class="text-gray-600 mb-4">"Best self-defense training I've ever experienced. Highly recommended!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1450666/pexels-photo-1450666.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Emma Thompson</h3>
+            <p class="text-gray-600 mb-4">"Amazing youth program. My kids have gained so much confidence!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+            <p class="text-gray-600 mb-4">"Dastbi MMA transformed my fitness journey. The trainers are incredible!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Mike Rodriguez</h3>
+            <p class="text-gray-600 mb-4">"Best self-defense training I've ever experienced. Highly recommended!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star-half-alt text-yellow-500"></i>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+            <img src="https://images.pexels.com/photos/1450666/pexels-photo-1450666.jpeg" 
+                 alt="Client Testimonial" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Emma Thompson</h3>
+            <p class="text-gray-600 mb-4">"Amazing youth program. My kids have gained so much confidence!"</p>
+            <div class="flex justify-center">
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+                <i class="fas fa-star text-yellow-500"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="text-center mt-8">
+        <a href="#" class="bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+            Read More Testimonials
+        </a>
+    </div> -->
+</section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="bg-brand-black text-brand-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Let Us Get Back To You</h2>
+            <form id="contact-form" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Name" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Email" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <input type="tel" placeholder="Phone Number" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <select class="w-full p-3 bg-white/10 rounded">
+                        <option  class="text-brand-black">Select Program</option>
+                        <option  class="text-brand-black">Book Free Trial</option>
+                        <option  class="text-brand-black">MMA</option>
+                        <option  class="text-brand-black">Kyokushin Karate</option>
+                        <option  class="text-brand-black">Muay Thai</option>
+                        <option  class="text-brand-black">Brazilian Jiu Jitsu</option>
+                        <option  class="text-brand-black">Kettlebell</option>
+                        <option  class="text-brand-black">Kickboxing</option>
+                        <option  class="text-brand-black">Combat Self Defense</option>
+                        <option  class="text-brand-black">Certifications</option>
+                        <!-- More program options -->
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Message" class="w-full p-3 bg-white/10 rounded" rows="4"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-blue text-brand-white py-3 rounded hover:bg-opacity-90">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-brand-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2024 Dastbi MMA. All Rights Reserved. Designed By <a href="https://saajid.netlify.app/" class="text-brand-blue" target="_blank">Sajid</a></p>
+        </div>
+    </footer>
+
+    <script>
+       
+    </script>
+</body>
+</html>
