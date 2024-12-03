@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastbi MMA Gym - Revolutionize Your Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-white': '#FFFFFF',
+                        'brand-blue': '#2C5E91',
+                        'brand-black': '#121212'
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+
+</head>
+<body class="bg-brand-white text-brand-black">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-brand-white text-brand-black z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="index.html" class="text-xl font-bold flex items-center">
+            <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-16 mr-4 md:h-20">
+        </a>
+        <div class="hidden lg:flex space-x-6 text-xl font-bold">
+            <a href="index.html" class="hover:text-brand-blue">Home</a>
+            <div class="relative group">
+                <a href="#" class="hover:text-brand-blue">Programs</a>
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
+                    <a href="program.html#mma" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">MMA</a>
+                    <a href="program.html#kyokushin" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                    <a href="program.html#muay-thai" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                    <a href="program.html#bjj" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                    <a href="program.html#kettlebell" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kettlebell</a>
+                </div>
+            </div>
+            <a href="about.html" class="hover:text-brand-blue">About Us</a>
+            <div class="relative group">
+                <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
+                    <a href="photo.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Photos</a>
+                    <a href="video.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Videos</a>
+                </div>
+            </div>
+            <a href="contact.html" class="hover:text-brand-blue">Contact</a>
+            <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
+        </div>
+        <div class="lg:hidden">
+            <button id="mobile-menu-toggle" class="text-brand-blue text-4xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu (Hidden by default) -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brand-black text-brand-white hidden z-50 pt-20 transition-opacity duration-300">
+    <div class="container mx-auto flex flex-col items-center space-y-6">
+        <a href="index.html" class="text-xl">Home</a>
+        <div class="relative group w-full flex flex-col items-center">
+            <a href="#" class="text-xl" id="programs-toggle">Programs</a>
+            <!-- <i class="fas fa-chevron-down"></i> dropdown icon -->
+            <div id="programs-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
+                <a href="program.html#mma" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">MMA</a>
+                <a href="program.html#kyokushin" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                <a href="program.html#muay-thai" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                <a href="program.html#bjj" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                <a href="program.html#kettlebell" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kettlebell</a>
+            </div>
+        </div>
+        <a href="about.html" class="text-xl">About Us</a>
+        <div class="relative group w-full flex flex-col items-center">
+            <a href="#gallery" class="text-xl" id="gallery-toggle">Gallery</a>
+            <div id="gallery-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
+                <a href="photo.html" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Photos</a>
+                <a href="video.html" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Videos</a>
+            </div>
+        </div>
+        <a href="contact.html" class="text-xl">Contact</a>
+        <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
+        <button id="mobile-menu-close" class="absolute top-6 right-6">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
+</div>
+   
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-brand-blue mt-14">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-brand-white mb-4">Contact Us</h1>
+            <!-- <p class="text-xl text-brand-white max-w-2xl mx-auto">Explore the moments that define our martial arts journey</p> -->
+        </div>
+    </section>
+
+<!-- Location and Address Section -->
+<section class="bg-brand-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-brand-black space-y-6">
+                <h2 class="text-4xl font-extrabold mb-6">Find Us</h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-brand-blue pl-4">
+                        <h3 class="text-2xl font-semibold mb-2">DASTBI MMA, KYOKUSHIN KARATE & FITNESS GYM</h3>
+                        <p class="text-lg">
+                            3rd Floor, House, 308, Basistha Rd, above L-16 salon, opp. NEPEDS, Nandanpur Path, Beltola Tiniali, Guwahati, Assam 781028
+                        </p>
+                    </div>
+                    <div class="border-l-4 border-brand-blue pl-4">
+                        <h3 class="text-2xl font-semibold mb-2">Contact Information</h3>
+                        <p class="text-lg">
+                            Phone: +91 (555) 11111111111<br>
+                            Email: <a href="mailto:info@dastbimma.com" class="text-brand-blue hover:underline">info@dastbimma.com</a>
+                        </p>
+                    </div>
+                    <div class="border-l-4 border-brand-blue pl-4">
+                        <h3 class="text-2xl font-semibold mb-2">Operating Hours</h3>
+                        <p class="text-lg text-gray-700">
+                            Monday - Friday: 6:00 AM - 9:00 PM<br>
+                            Saturday: 8:00 AM - 2:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114641.36959857962!2d91.65258499152858!3d26.113839215410177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59aa7185e605%3A0x2186965ea74097c2!2sDASTBI%20MMA!5e0!3m2!1sen!2sin!4v1733213843111!5m2!1sen!2sin" target="_blank" class="inline-block bg-brand-blue text-brand-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-brand-black transition-colors duration-300">Get Directions</a>
+                </div>
+            </div>
+            <div class="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114641.36959857962!2d91.65258499152858!3d26.113839215410177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59aa7185e605%3A0x2186965ea74097c2!2sDASTBI%20MMA!5e0!3m2!1sen!2sin!4v1733213843111!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded-lg"
+                ></iframe>
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                <div class="absolute bottom-4 left-4 text-white text-lg">
+                    <h3 class="font-bold">Visit Us</h3>
+                    <p>Get Directions to our Gym</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Contact Form -->
+    <section id="contact" class="bg-brand-black text-brand-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Let Us Get Back To You</h2>
+            <form id="contact-form" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Name" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Email" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <input type="tel" placeholder="Phone Number" required class="w-full p-3 bg-white/10 rounded">
+                </div>
+                <div class="mb-4">
+                    <select class="w-full p-3 bg-white/10 rounded">
+                        <option  class="text-brand-black">Select Program</option>
+                        <option  class="text-brand-black">Book Free Trial</option>
+                        <option  class="text-brand-black">MMA</option>
+                        <option  class="text-brand-black">Kyokushin Karate</option>
+                        <option  class="text-brand-black">Muay Thai</option>
+                        <option  class="text-brand-black">Brazilian Jiu Jitsu</option>
+                        <option  class="text-brand-black">Kettlebell</option>
+                        <option  class="text-brand-black">Kickboxing</option>
+                        <option  class="text-brand-black">Combat Self Defense</option>
+                        <option  class="text-brand-black">Certifications</option>
+                        <!-- More program options -->
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Message" class="w-full p-3 bg-white/10 rounded" rows="4"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-blue text-brand-white py-3 rounded hover:bg-opacity-90">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-brand-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2024 Dastbi MMA. All Rights Reserved. Designed By <a href="https://saajid.netlify.app/" class="text-brand-blue" target="_blank">Sajid</a></p>
+        </div>
+    </footer>
+
+    <script>
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const programsToggle = document.getElementById('programs-toggle');
+const programsDropdown = document.getElementById('programs-dropdown');
+const galleryToggle = document.getElementById('gallery-toggle');
+const galleryDropdown = document.getElementById('gallery-dropdown');
+const bookTrialButtons = document.querySelectorAll('#book-trial-button');
+
+// Function to handle "Book Free Trial" button click
+const handleBookTrialClick = (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    // Close the mobile menu if it's open
+    if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('opacity-100');
+    }
+
+    // Show the contact form section
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+
+    // Select the "Book Free Trial" option
+    document.querySelector('#contact-form select').value = "Book Free Trial";
+};
+
+// Add event listeners for the book trial buttons
+bookTrialButtons.forEach(button => {
+    button.addEventListener('click', handleBookTrialClick);
+});
+
+mobileMenuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    setTimeout(() => {
+        mobileMenu.classList.toggle('opacity-100');
+    }, 10);
+});
+
+mobileMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('opacity-100');
+});
+
+programsToggle.addEventListener('click', () => {
+    programsDropdown.classList.toggle('hidden');
+    setTimeout(() => {
+        programsDropdown.classList.toggle('opacity-100');
+        programsDropdown.classList.toggle('translate-y-0');
+    }, 10);
+});
+
+galleryToggle.addEventListener('click', () => {
+    galleryDropdown.classList.toggle('hidden');
+    setTimeout(() => {
+        galleryDropdown.classList.toggle('opacity-100');
+        galleryDropdown.classList.toggle('translate-y-0');
+    }, 10);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all "Book Free Trial" buttons
+    const bookTrialButtons = document.querySelectorAll('a[href="#book-trial"]');
+    
+    bookTrialButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            
+            // Redirect to index.html and scroll to contact form
+            window.location.href = 'index.html#contact-form';
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
+
+
+

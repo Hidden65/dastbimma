@@ -30,71 +30,71 @@
 </head>
 <body class="bg-brand-white text-brand-black">
     <nav class="fixed top-0 left-0 w-full bg-brand-white text-brand-black z-50">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="index.html" class="text-xl font-bold flex items-center">
-                <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-20 mr-4">
-            </a>
-            <div class="hidden lg:flex space-x-6 text-xl font-bold">
-                <a href="index.html" class="hover:text-brand-blue">Home</a>
-                <div class="relative group">
-                    <a href="program.html" class="hover:text-brand-blue">Programs</a>
-                    <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
-                        <a href="#mma" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">MMA</a>
-                        <a href="#kyokushin" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
-                        <a href="#muay-thai" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Muay Thai</a>
-                        <a href="#bjj" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
-                        <a href="#kettlebell" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kettlebell</a>
-                    </div>
-                </div>
-                <a href="about.html" class="hover:text-brand-blue">About Us</a>
-                <div class="relative group">
-                    <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
-                    <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
-                        <a href="#photos" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Photos</a>
-                        <a href="#videos" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Videos</a>
-                    </div>
-                </div>
-                <a href="#contact" class="hover:text-brand-blue">Contact</a>
-                <a href="#book-trial" class="bg-brand-blue text-brand-white px-4 py-2 rounded">Book Free Trial</a>
-            </div>
-            <div class="lg:hidden">
-                <button id="mobile-menu-toggle" class="text-brand-blue text-4xl">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brand-black text-brand-white hidden z-50 pt-20 transition-opacity duration-300">
-        <div class="container mx-auto flex flex-col items-center space-y-6">
-            <a href="index.html" class="text-xl">Home</a>
-            <div class="relative group w-full flex flex-col items-center">
-                <a href="program.html" class="text-xl" id="programs-toggle">Programs</a>
-                <!-- <i class="fas fa-chevron-down"></i> dropdown icon -->
-                <div id="programs-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
-                    <a href="#mma" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">MMA</a>
-                    <a href="#kyokushin" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
-                    <a href="#muay-thai" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Muay Thai</a>
-                    <a href="#bjj" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
-                    <a href="#kettlebell" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kettlebell</a>
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="index.html" class="text-xl font-bold flex items-center">
+            <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-16 mr-4 md:h-20">
+        </a>
+        <div class="hidden lg:flex space-x-6 text-xl font-bold">
+            <a href="index.html" class="hover:text-brand-blue">Home</a>
+            <div class="relative group">
+                <a href="#" class="hover:text-brand-blue">Programs</a>
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
+                    <a href="program.html#mma" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">MMA</a>
+                    <a href="program.html#kyokushin" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                    <a href="program.html#muay-thai" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                    <a href="program.html#bjj" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                    <a href="program.html#kettlebell" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kettlebell</a>
                 </div>
             </div>
-            <a href="about.html" class="text-xl">About Us</a>
-            <div class="relative group w-full flex flex-col items-center">
-                <a href="#gallery" class="text-xl" id="gallery-toggle">Gallery</a>
-                <div id="gallery-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
-                    <a href="#photos" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Photos</a>
-                    <a href="#videos" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Videos</a>
+            <a href="about.html" class="hover:text-brand-blue">About Us</a>
+            <div class="relative group">
+                <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
+                    <a href="photo.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Photos</a>
+                    <a href="video.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Videos</a>
                 </div>
             </div>
-            <a href="#contact" class="text-xl">Contact</a>
+            <a href="contact.html" class="hover:text-brand-blue">Contact</a>
             <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
-            <button id="mobile-menu-close" class="absolute top-6 right-6">
-                <i class="fas fa-times text-2xl"></i>
+        </div>
+        <div class="lg:hidden">
+            <button id="mobile-menu-toggle" class="text-brand-blue text-4xl">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
     </div>
+</nav>
+
+<!-- Mobile Menu (Hidden by default) -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brand-black text-brand-white hidden z-50 pt-20 transition-opacity duration-300">
+    <div class="container mx-auto flex flex-col items-center space-y-6">
+        <a href="index.html" class="text-xl">Home</a>
+        <div class="relative group w-full flex flex-col items-center">
+            <a href="#" class="text-xl" id="programs-toggle">Programs</a>
+            <!-- <i class="fas fa-chevron-down"></i> dropdown icon -->
+            <div id="programs-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
+                <a href="program.html#mma" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">MMA</a>
+                <a href="program.html#kyokushin" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                <a href="program.html#muay-thai" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                <a href="program.html#bjj" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                <a href="program.html#kettlebell" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kettlebell</a>
+            </div>
+        </div>
+        <a href="about.html" class="text-xl">About Us</a>
+        <div class="relative group w-full flex flex-col items-center">
+            <a href="#gallery" class="text-xl" id="gallery-toggle">Gallery</a>
+            <div id="gallery-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
+                <a href="photo.html" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Photos</a>
+                <a href="video.html" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Videos</a>
+            </div>
+        </div>
+        <a href="contact.html" class="text-xl">Contact</a>
+        <a href="#book-trial"  class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
+        <button id="mobile-menu-close" class="absolute top-6 right-6">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
+</div>
 
 
 <!-- About Gym Section -->
@@ -204,7 +204,7 @@
     <div class="container mx-auto px-4" id="call-to-action">
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Transform Your Fitness Today</h2>
         <p class="text-base lg:text-lg mb-8 max-w-2xl mx-auto">Start your martial arts journey with a free trial. Experience world-class training, expert coaching, and a supportive community.</p>
-        <a href="#" class="bg-white text-brand-blue px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-bold hover:bg-gray-100 transition">Book Free Trial</a>
+        <a href="#book-trial" class="bg-white text-brand-blue px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-bold hover:bg-gray-100 transition">Book Free Trial</a>
     </div>
 </section>
 
@@ -302,6 +302,19 @@ galleryToggle.addEventListener('click', () => {
         });
     });
 
+    document.addEventListener('DOMContentLoaded', () => {
+    // Select all "Book Free Trial" buttons
+    const bookTrialButtons = document.querySelectorAll('a[href="#book-trial"]');
+    
+    bookTrialButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            
+            // Redirect to index.html and scroll to contact form
+            window.location.href = 'index.html#contact-form';
+        });
+    });
+});
 
     </script>
 </body>

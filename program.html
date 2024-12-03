@@ -32,6 +32,12 @@
         opacity: 1;
         transform: translateY(0);
     }
+    
+  section {
+      scroll-margin-top: 20vh; /* Adjust based on your header height */
+  }
+    
+    
 </style>
 
     
@@ -40,30 +46,30 @@
     <nav class="fixed top-0 left-0 w-full bg-brand-white text-brand-black z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
             <a href="index.html" class="text-xl font-bold flex items-center">
-                <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-20 mr-4">
+                <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-16 mr-4 md:h-20">
             </a>
             <div class="hidden lg:flex space-x-6 text-xl font-bold">
-                <a href="#home" class="hover:text-brand-blue">Home</a>
+                <a href="index.html" class="hover:text-brand-blue">Home</a>
                 <div class="relative group">
-                    <a href="program.html" class="hover:text-brand-blue">Programs</a>
+                    <a href="#" class="hover:text-brand-blue">Programs</a>
                     <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
-                        <a href="#mma" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">MMA</a>
-                        <a href="#kyokushin" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
-                        <a href="#muay-thai" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Muay Thai</a>
-                        <a href="#bjj" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
-                        <a href="#kettlebell" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kettlebell</a>
+                        <a href="program.html#mma" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">MMA</a>
+                        <a href="program.html#kyokushin" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                        <a href="program.html#muay-thai" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                        <a href="program.html#bjj" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                        <a href="program.html#kettlebell" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kettlebell</a>
                     </div>
                 </div>
                 <a href="about.html" class="hover:text-brand-blue">About Us</a>
                 <div class="relative group">
                     <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
                     <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
-                        <a href="#photos" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Photos</a>
-                        <a href="#videos" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Videos</a>
+                        <a href="photo.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Photos</a>
+                        <a href="video.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Videos</a>
                     </div>
                 </div>
-                <a href="#contact" class="hover:text-brand-blue">Contact</a>
-                <a href="#book-trial" class="bg-brand-blue text-brand-white px-4 py-2 rounded">Book Free Trial</a>
+                <a href="contact.html" class="hover:text-brand-blue">Contact</a>
+                <a href="#book-trial"  class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
             </div>
             <div class="lg:hidden">
                 <button id="mobile-menu-toggle" class="text-brand-blue text-4xl">
@@ -78,25 +84,25 @@
         <div class="container mx-auto flex flex-col items-center space-y-6">
             <a href="index.html" class="text-xl">Home</a>
             <div class="relative group w-full flex flex-col items-center">
-                <a href="program.html" class="text-xl" id="programs-toggle">Programs</a>
+                <a href="#" class="text-xl" id="programs-toggle">Programs</a>
                 <!-- <i class="fas fa-chevron-down"></i> dropdown icon -->
                 <div id="programs-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
-                    <a href="#mma" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">MMA</a>
-                    <a href="#kyokushin" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
-                    <a href="#muay-thai" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Muay Thai</a>
-                    <a href="#bjj" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
-                    <a href="#kettlebell" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kettlebell</a>
+                    <a href="program.html#mma" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">MMA</a>
+                    <a href="program.html#kyokushin" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                    <a href="program.html#muay-thai" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                    <a href="program.html#bjj" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                    <a href="program.html#kettlebell" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kettlebell</a>
                 </div>
             </div>
             <a href="about.html" class="text-xl">About Us</a>
             <div class="relative group w-full flex flex-col items-center">
                 <a href="#gallery" class="text-xl" id="gallery-toggle">Gallery</a>
                 <div id="gallery-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
-                    <a href="#photos" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Photos</a>
-                    <a href="#videos" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Videos</a>
+                    <a href="photo.html" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Photos</a>
+                    <a href="video.html" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Videos</a>
                 </div>
             </div>
-            <a href="#contact" class="text-xl">Contact</a>
+            <a href="contact.html" class="text-xl">Contact</a>
             <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
             <button id="mobile-menu-close" class="absolute top-6 right-6">
                 <i class="fas fa-times text-2xl"></i>
@@ -141,6 +147,36 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Kyokushin Karate Section -->
+  <section id="kyokushin" class="program-section mb-20 flex flex-col md:flex-row-reverse items-center">
+    <div class="md:w-1/2 mb-8 md:mb-0 md:ml-12">
+        <img src="https://images.pexels.com/photos/7045608/pexels-photo-7045608.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kyokushin Karate Training" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+    </div>
+    <div class="md:w-1/2">
+        <h3 class="text-3xl font-bold text-brand-blue mb-6">Kyokushin Karate</h3>
+        <div class="space-y-4 text-brand-black">
+            <div class="flex items-center">
+                <svg class="w-8 h-8 mr-4 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <p>Traditional full-contact Japanese karate style</p>
+            </div>
+            <div class="flex items-center">
+                <svg class="w-8 h-8 mr-4 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <p>Intense physical and mental discipline training</p>
+            </div>
+            <div class="flex items-center">
+                <svg class="w-8 h-8 mr-4 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <p>Powerful striking and powerful conditioning</p>
+            </div>
+        </div>
+    </div>
+</section>
 
             <!-- Muay Thai Section -->
             <section id="muay-thai" class="program-section mb-20 flex flex-col md:flex-row-reverse items-center">
@@ -202,35 +238,7 @@
                 </div>
             </section>
 
-  <!-- Kyokushin Karate Section -->
-  <section id="kyokushin" class="program-section mb-20 flex flex-col md:flex-row-reverse items-center">
-    <div class="md:w-1/2 mb-8 md:mb-0 md:ml-12">
-        <img src="https://images.pexels.com/photos/7045608/pexels-photo-7045608.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kyokushin Karate Training" class="rounded-lg shadow-2xl w-full h-auto object-cover">
-    </div>
-    <div class="md:w-1/2">
-        <h3 class="text-3xl font-bold text-brand-blue mb-6">Kyokushin Karate</h3>
-        <div class="space-y-4 text-brand-black">
-            <div class="flex items-center">
-                <svg class="w-8 h-8 mr-4 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
-                </svg>
-                <p>Traditional full-contact Japanese karate style</p>
-            </div>
-            <div class="flex items-center">
-                <svg class="w-8 h-8 mr-4 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
-                </svg>
-                <p>Intense physical and mental discipline training</p>
-            </div>
-            <div class="flex items-center">
-                <svg class="w-8 h-8 mr-4 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
-                </svg>
-                <p>Powerful striking and powerful conditioning</p>
-            </div>
-        </div>
-    </div>
-</section>
+  
 
 <!-- Kettlebell Section -->
 <section id="kettlebell" class="program-section mb-20 flex flex-col md:flex-row items-center">
@@ -391,6 +399,22 @@ galleryToggle.addEventListener('click', () => {
         galleryDropdown.classList.toggle('translate-y-0');
     }, 10);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all "Book Free Trial" buttons
+    const bookTrialButtons = document.querySelectorAll('a[href="#book-trial"]');
+    
+    bookTrialButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            
+            // Redirect to index.html and scroll to contact form
+            window.location.href = 'index.html#contact-form';
+        });
+    });
+});
+
+
 
 
  // GSAP ScrollTrigger Animations
