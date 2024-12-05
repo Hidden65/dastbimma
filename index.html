@@ -61,11 +61,11 @@
         <a href="index.html" class="text-xl font-bold flex items-center">
             <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-16 mr-4 md:h-20">
         </a>
-        <div class="hidden lg:flex space-x-6 text-xl font-bold">
+        <div class="hidden lg:flex space-x-6 text-xl font-bold items-center">
             <a href="index.html" class="hover:text-brand-blue">Home</a>
             <div class="relative group">
                 <a href="#" class="hover:text-brand-blue">Programs</a>
-                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg rounded">
                     <a href="program.html#mma" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">MMA</a>
                     <a href="program.html#kyokushin" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
                     <a href="program.html#muay-thai" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Muay Thai</a>
@@ -76,7 +76,7 @@
             <a href="about.html" class="hover:text-brand-blue">About Us</a>
             <div class="relative group">
                 <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
-                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg mt-2 rounded">
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg rounded">
                     <a href="photo.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Photos</a>
                     <a href="video.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Videos</a>
                 </div>
@@ -159,9 +159,9 @@
             <p class="text-lg mb-6 hidden md:block">
                 We also organize seminars, boot camps, free self-defense training sessions for women under the 'Divas to Defense Program.
             </p>
-            <button id="read-more-btn" class="bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
+            <a href="about.html" class="bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90">
                 Read More
-            </button>
+            </a>
         </div>
     </div>
 </section>
@@ -251,8 +251,8 @@
 <!-- Upcoming Events Section -->
 <section id="upcoming-events" class="container mx-auto py-16 px-4">
     <h2 class="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
-    <div class="carousel-container md:grid md:grid-cols-3 gap-8">
-        <div class="carousel-wrapper flex">
+    <div class="carousel-container md:grid md:grid-cols-3 gap-8 ">
+        <div class="carousel-wrapper flex ">
             <div class="carousel-item bg-white rounded-lg shadow-md p-6 flex-shrink-0">
                 <h3 class="text-2xl font-semibold mb-4">MMA Tournament</h3>
                 <p class="text-gray-600 mb-4">Annual Inter-Gym Championship</p>
@@ -542,13 +542,13 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Empowering the Youth',
             description: 'Unlock your kid\'s true potential with our Youth Program. Join today',
-            image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            image: 'https://images.pexels.com/photos/7045747/pexels-photo-7045747.jpeg?auto=compress&cs=tinysrgb&w=600',
             buttonText: 'Register'
         },
         {
             title: 'Ultimate Strength Training',
             description: 'Strengthen your core with our special strength training. Join now',
-            image: 'https://images.pexels.com/photos/2204179/pexels-photo-2204179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            image: 'https://images.pexels.com/photos/598631/pexels-photo-598631.jpeg?auto=compress&cs=tinysrgb&w=600',
             buttonText: 'Get Started'
         }
     ];
@@ -643,8 +643,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function populatePrograms() {
         const programsContainer = document.querySelector('#programs .grid');
         programsContainer.innerHTML = programs.map(program => `
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <img src="${program.image}" alt="${program.name}" class="mx-auto mb-4 rounded-lg">
+            <div class="bg-white shadow-lg rounded-lg p-2 text-center">
+                <img src="${program.image}" alt="${program.name}" class="mx-auto mb-4 w-full ">
                 <h3 class="text-xl font-semibold">${program.name}</h3>
                 <a href="${program.link}" class="bg-brand-blue text-white px-4 py-2 mt-4 inline-block rounded-lg hover:bg-opacity-90">Read More</a>
             </div>
