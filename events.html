@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastbi MMA Gym - Revolutionize Your Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-white': '#FFFFFF',
+                        'brand-blue': '#2C5E91',
+                        'brand-black': '#121212'
+                    }
+                }
+            }
+        }
+    </script>
+
+<style>
+ 
+</style>
+
+    
+</head>
+<body class="bg-brand-white text-brand-black">
+    <!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-brand-white text-brand-black z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="index.html" class="text-xl font-bold flex items-center">
+            <img src="main_logo-removebg-preview.png" alt="DASTBI MMA" class="h-16 mr-4 md:h-20">
+        </a>
+        <div class="hidden lg:flex space-x-6 text-xl font-bold items-center">
+            <a href="index.html" class="hover:text-brand-blue">Home</a>
+            <div class="relative group">
+                <a href="#" class="hover:text-brand-blue">Programs</a>
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg rounded">
+                    <a href="program.html#mma" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">MMA</a>
+                    <a href="program.html#kyokushin" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                    <a href="program.html#muay-thai" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                    <a href="program.html#bjj" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                    <a href="program.html#kettlebell" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Kettlebell</a>
+                </div>
+            </div>
+            <a href="about.html" class="hover:text-brand-blue">About Us</a>
+            <div class="relative group">
+                <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
+                <div class="absolute left-0 hidden bg-white text-brand-black group-hover:block shadow-lg rounded">
+                    <a href="photo.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Photos</a>
+                    <a href="video.html" class="block px-4 py-2 hover:bg-brand-blue hover:text-white">Videos</a>
+                </div>
+            </div>
+            <a href="contact.html" class="hover:text-brand-blue">Contact</a>
+            <a href="#book-trial" class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
+        </div>
+        <div class="lg:hidden">
+            <button id="mobile-menu-toggle" class="text-brand-blue text-3xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu (Hidden by default) -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brand-black text-brand-white hidden z-50 pt-20 transition-opacity duration-300">
+    <div class="container mx-auto flex flex-col items-center space-y-6">
+        <a href="index.html" class="text-xl">Home</a>
+        <div class="relative group w-full flex flex-col items-center">
+            <a href="#" class="text-xl" id="programs-toggle">Programs</a>
+            <!-- <i class="fas fa-chevron-down"></i> dropdown icon -->
+            <div id="programs-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
+                <a href="program.html#mma" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">MMA</a>
+                <a href="program.html#kyokushin" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kyokushin Karate</a>
+                <a href="program.html#muay-thai" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Muay Thai</a>
+                <a href="program.html#bjj" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Brazilian Jiu Jitsu</a>
+                <a href="program.html#kettlebell" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Kettlebell</a>
+            </div>
+        </div>
+        <a href="about.html" class="text-xl">About Us</a>
+        <div class="relative group w-full flex flex-col items-center">
+            <a href="#gallery" class="text-xl" id="gallery-toggle">Gallery</a>
+            <div id="gallery-dropdown" class="hidden flex-col items-center bg-black text-brand-white shadow-lg mt-2 rounded w-11/12 transition-transform duration-300 transform -translate-y-4 opacity-0">
+                <a href="photo.html" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Photos</a>
+                <a href="video.html" class="block w-full text-center px-4 py-2 text-lg hover:bg-brand-blue hover:text-white">Videos</a>
+            </div>
+        </div>
+        <a href="contact.html" class="text-xl">Contact</a>
+        <a href="#book-trial"  class="bg-brand-blue text-brand-white px-6 py-3 rounded text-xl">Book Free Trial</a>
+        <button id="mobile-menu-close" class="absolute top-6 right-6">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
+</div>
+
+
+<section class="py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center mb-8">
+            Upcoming Events
+        </h2>
+        <div class="mb-8 flex flex-wrap justify-center gap-4">
+            <button class="filter-btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-category="all">All</button>
+            <button class="filter-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded" data-category="conference">Conferences</button>
+            <button class="filter-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded" data-category="workshop">Workshops</button>
+            <button class="filter-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded" data-category="webinar">Webinars</button>
+        </div>
+        <div id="events-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Event cards will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    
+
+  
+
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-brand-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.facebook.com/dastbimma" class="text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/dastbi_mma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@dastbimma?si=TMbu9_MoOYtM6l93" class="text-2xl"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/dastbi_mma" class="text-2xl"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Dastbi MMA. All Rights Reserved. Designed By <a href="https://saajid.netlify.app/" class="text-brand-blue" target="_blank">Sajid</a></p>
+        </div>
+    </footer>
+
+    <script>
+       const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const programsToggle = document.getElementById('programs-toggle');
+const programsDropdown = document.getElementById('programs-dropdown');
+const galleryToggle = document.getElementById('gallery-toggle');
+const galleryDropdown = document.getElementById('gallery-dropdown');
+
+mobileMenuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    setTimeout(() => {
+        mobileMenu.classList.toggle('opacity-100');
+    }, 10);
+});
+
+mobileMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('opacity-100');
+});
+
+programsToggle.addEventListener('click', () => {
+    programsDropdown.classList.toggle('hidden');
+    setTimeout(() => {
+        programsDropdown.classList.toggle('opacity-100');
+        programsDropdown.classList.toggle('translate-y-0');
+    }, 10);
+});
+
+galleryToggle.addEventListener('click', () => {
+    galleryDropdown.classList.toggle('hidden');
+    setTimeout(() => {
+        galleryDropdown.classList.toggle('opacity-100');
+        galleryDropdown.classList.toggle('translate-y-0');
+    }, 10);
+});
+
+  // GSAP ScrollTrigger Animations
+//   document.addEventListener('DOMContentLoaded', () => {
+//         gsap.registerPlugin(ScrollTrigger);
+
+//         const sections = [
+//             { id: 'gym-text', start: 'top 80%', end: 'top 20%' },
+//             { id: 'gym-image', start: 'top 80%', end: 'top 20%' },
+//             { id: 'trainer-image', start: 'top 80%', end: 'top 20%' },
+//             { id: 'trainer-text', start: 'top 80%', end: 'top 20%' },
+//             { id: 'package-basic', start: 'top 80%', end: 'top 20%' },
+//             { id: 'package-pro', start: 'top 80%', end: 'top 20%' },
+//             { id: 'package-elite', start: 'top 80%', end: 'top 20%' },
+//             { id: 'call-to-action', start: 'top 80%', end: 'top 20%' }
+//         ];
+
+//         sections.forEach(section => {
+//             const element = document.getElementById(section.id);
+//             gsap.fromTo(
+//                 element, 
+//                 { opacity: 0, y: 50 }, 
+//                 {
+//                     opacity: 1, 
+//                     y: 0, 
+//                     duration: 1, 
+//                     scrollTrigger: {
+//                         trigger: element,
+//                         start: section.start,
+//                         end: section.end,
+//                         toggleActions: 'play none none reverse'
+//                     }
+//                 }
+//             );
+//         });
+//     });
+
+const events = [
+            { id: 1, title: "Web Development Summit", date: "2023-08-15", category: "conference", image: "/placeholder.svg?height=200&width=300" },
+            { id: 2, title: "UX Design Workshop", date: "2023-09-01", category: "workshop", image: "/placeholder.svg?height=200&width=300" },
+            { id: 3, title: "AI in Business Webinar", date: "2023-09-10", category: "webinar", image: "/placeholder.svg?height=200&width=300" },
+            { id: 4, title: "Mobile App Development Conference", date: "2023-09-20", category: "conference", image: "/placeholder.svg?height=200&width=300" },
+            { id: 5, title: "Data Science Bootcamp", date: "2023-10-05", category: "workshop", image: "/placeholder.svg?height=200&width=300" },
+            { id: 6, title: "Cybersecurity Trends Webinar", date: "2023-10-15", category: "webinar", image: "/placeholder.svg?height=200&width=300" },
+        ];
+
+        function createEventCard(event) {
+            return `
+                <div class="bg-white rounded-lg shadow-md overflow-hidden event-card" data-category="${event.category}">
+                    <img src="${event.image}" alt="${event.title}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">${event.title}</h3>
+                        <p class="text-gray-600 mb-4">${new Date(event.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">${event.category}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEvents(filteredEvents = events) {
+            const eventsGrid = document.getElementById('events-grid');
+            eventsGrid.innerHTML = filteredEvents.map(createEventCard).join('');
+        }
+
+        function filterEvents(category) {
+            const filteredEvents = category === 'all' ? events : events.filter(event => event.category === category);
+            renderEvents(filteredEvents);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderEvents();
+
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('bg-blue-500', 'text-white'));
+                    filterButtons.forEach(btn => btn.classList.add('bg-gray-200', 'text-gray-800'));
+                    button.classList.remove('bg-gray-200', 'text-gray-800');
+                    button.classList.add('bg-blue-500', 'text-white');
+                    filterEvents(button.dataset.category);
+                });
+            });
+        });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    // Select all "Book Free Trial" buttons
+    const bookTrialButtons = document.querySelectorAll('a[href="#book-trial"]');
+    
+    bookTrialButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            
+            // Redirect to index.html and scroll to contact form
+            window.location.href = 'index.html#contact-form';
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
